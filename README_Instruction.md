@@ -1,38 +1,75 @@
+# NST DVA Capstone 2 - Project Repository
+
+> **Newton School of Technology | Data Visualization & Analytics**
+> A 2-week industry simulation capstone using Python, GitHub, and Tableau to convert raw data into actionable business intelligence.
+
+---
+
+## Before You Start
+
+1. Rename the repository using the format `SectionName_TeamID_ProjectName`.
+2. Fill in the project details and team table below.
+3. Add the raw dataset to `data/raw/`.
+4. Complete the notebooks in order from `01` to `05`.
+5. Publish the final dashboard and add the public link in `tableau/dashboard_links.md`.
+6. Export the final report and presentation as PDFs into `reports/`.
+
+### Quick Start
+
+If you are working locally:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+jupyter notebook
+```
+
+If you are working in Google Colab:
+
+- Upload or sync the notebooks from `notebooks/`
+- Keep the final `.ipynb` files committed to GitHub
+- Export any cleaned datasets into `data/processed/`
+
+---
+
 ## Project Overview
 
 | Field | Details |
 |---|---|
-| **Project Title** | Urban Traffic Collision & Severity Analysis |
-| **Sector** | Public Sector / Transportation Authority |
-| **Team ID** | `[e.g. DVA-B1-T3]` |
-| **Section** | `[To be filled by team]` |
-| **Faculty Mentor** | `[To be filled by team]` |
-| **Institute** | Newton School of Technology, Pune |
-| **Submission Date** | `[To be filled by team]` |
+| **Project Title** | _To be filled by team_ |
+| **Sector** | _e.g. Retail, Finance, Healthcare, EdTech_ |
+| **Team ID** | _e.g. DVA-B1-T3_ |
+| **Section** | _To be filled by team_ |
+| **Faculty Mentor** | _To be filled by team_ |
+| **Institute** | Newton School of Technology |
+| **Submission Date** | _To be filled by team_ |
 
 ### Team Members
 
 | Role | Name | GitHub Username |
 |---|---|---|
-| Project / ETL/ Data Lead | Rohan Kumar | [Necro-Rohan](https://github.com/Necro-Rohan) |
-| Analysis Lead | Kundan Gupta | [Kundan-CR7](https://github.com/Kundan-CR7) |
-| Visualization Lead | Krish Patil | [krishx06](https://github.com/krishx06) |
-| Strategy Lead | Yashraj Chouhan | [jadu07](https://github.com/jadu07) |
-| PPT and Quality Lead | Rahul Gupta | [Rahulgupta7777](https://github.com/RahulGupta7777) |
+| Project Lead | _Name_ | `github-handle` |
+| Data Lead | _Name_ | `github-handle` |
+| ETL Lead | _Name_ | `github-handle` |
+| Analysis Lead | _Name_ | `github-handle` |
+| Visualization Lead | _Name_ | `github-handle` |
+| Strategy Lead | _Name_ | `github-handle` |
+| PPT and Quality Lead | _Name_ | `github-handle` |
 
 ---
 
 ## Business Problem
 
-Despite existing traffic regulations, road traffic accidents continue to cause significant casualties and infrastructure disruption. Traffic authorities lack a granular understanding of how environmental conditions, driver demographics, and road surfaces interact to escalate minor collisions into severe accidents. This project analyzes these specific interactions to provide actionable insights for city planners and law enforcement.
+_Describe the sector context, the decision-maker this project serves, and the core business challenge being addressed. Keep this to 3-5 sentences written in plain language, as if addressing a senior stakeholder._
 
 **Core Business Question**
 
-> How can city traffic departments optimize patrol deployments and targeted public awareness campaigns to proactively reduce the frequency and severity of road traffic accidents?
+> _State the single main question your Tableau dashboard and Python analysis will answer._
 
 **Decision Supported**
 
-> This analysis will enable traffic planning departments to strategically allocate highway patrol resources during high-risk times/conditions and design targeted safe-driving initiatives based on specific demographic and environmental triggers.
+> _What action or decision will this analysis enable the stakeholder to take?_
 
 ---
 
@@ -40,22 +77,21 @@ Despite existing traffic regulations, road traffic accidents continue to cause s
 
 | Attribute | Details |
 |---|---|
-| **Source Name** | Road Traffic Accident (RTA) Dataset |
-| **Direct Access Link** | `[Paste the direct download or access URL]` |
-| **Row Count** | 12,316 |
-| **Column Count** | 32 |
-| **Time Period Covered** | `[Determine via EDA]` |
-| **Format** | CSV |
+| **Source Name** | _e.g. World Bank, data.gov.in, Kaggle (raw only)_ |
+| **Direct Access Link** | _Paste the direct download or access URL_ |
+| **Row Count** | _Must be greater than 5,000_ |
+| **Column Count** | _Must be greater than 8 meaningful columns_ |
+| **Time Period Covered** | _e.g. Jan 2019 to Dec 2023_ |
+| **Format** | _e.g. CSV, JSON, Excel_ |
 
 **Key Columns Used**
 
 | Column Name | Description | Role in Analysis |
 |---|---|---|
-| `Accident_severity` | Categorization of the crash outcome (Slight, Serious, Fatal) | Target Variable / Primary KPI driver |
-| `Day_of_week` / `Time` | Temporal indicators of when the crash occurred | Used for temporal patrol scheduling |
-| `Light_conditions` | Lighting environment at the time of the crash | Used for environmental risk segmentation |
-| `Road_surface_conditions` | State of the road (e.g., Dry, Wet, Snow) | Used for infrastructure/weather segmentation |
-| `Age_band_of_driver` | Demographic grouping of the involved driver | Used for targeted public awareness targeting |
+| _column_1_ | _What it means_ | _Used for KPI / filter / segmentation_ |
+| _column_2_ | _What it means_ | _Used for KPI / filter / segmentation_ |
+| _column_3_ | _What it means_ | _Used for KPI / filter / segmentation_ |
+| _column_4_ | _What it means_ | _Used for KPI / filter / segmentation_ |
 
 For full column definitions, see [`docs/data_dictionary.md`](docs/data_dictionary.md).
 
@@ -65,9 +101,9 @@ For full column definitions, see [`docs/data_dictionary.md`](docs/data_dictionar
 
 | KPI | Definition | Formula / Computation |
 |---|---|---|
-| **Accident Severity Ratio** | Percentage of accidents categorized as 'Serious' or 'Fatal' vs 'Slight'. | `(Count of Serious + Fatal) / Total Accidents` |
-| **High-Risk Time Frequency** | The volume of severe accidents occurring during specific time blocks or days. | `Count(Accidents) grouped by Time/Day` |
-| **Adverse Condition Rate** | Proportion of accidents occurring under non-optimal lighting or weather conditions. | `Count(Accidents where Light != Daylight) / Total` |
+| _e.g. Monthly Revenue Growth %_ | _What business outcome this tracks_ | _Show the exact formula or notebook reference_ |
+| _e.g. Customer Churn Rate_ | _What business outcome this tracks_ | _Show the exact formula or notebook reference_ |
+| _e.g. Repeat Purchase Rate_ | _What business outcome this tracks_ | _Show the exact formula or notebook reference_ |
 
 Document KPI logic clearly in `notebooks/04_statistical_analysis.ipynb` and `notebooks/05_final_load_prep.ipynb`.
 
@@ -77,10 +113,10 @@ Document KPI logic clearly in `notebooks/04_statistical_analysis.ipynb` and `not
 
 | Item | Details |
 |---|---|
-| **Dashboard URL** | `[Paste Tableau Public link here]` |
-| **Executive View** | High-level overview of overall accident frequency, severity trends, and top risk factors. |
-| **Operational View** | Granular drill-down by time, day, and specific road condition to guide daily patrol deployment. |
-| **Main Filters** | Day of Week, Light Conditions, Driver Age Band, Accident Severity. |
+| **Dashboard URL** | _Paste Tableau Public link here_ |
+| **Executive View** | _Describe the high-level KPI summary view_ |
+| **Operational View** | _Describe the detailed drill-down view_ |
+| **Main Filters** | _List the interactive filters used_ |
 
 Store dashboard screenshots in [`tableau/screenshots/`](tableau/screenshots/) and document the public links in [`tableau/dashboard_links.md`](tableau/dashboard_links.md).
 
@@ -88,28 +124,28 @@ Store dashboard screenshots in [`tableau/screenshots/`](tableau/screenshots/) an
 
 ## Key Insights
 
-*Insights to be filled post-EDA. List 8-12 major findings from the analysis, written in decision language. Each insight should tell the reader what to think or act upon, not merely describe a chart.*
+_List 8-12 major findings from the analysis, written in decision language. Each insight should tell the reader what to think or act upon, not merely describe a chart._
 
-1. `[Insight 1]`
-2. `[Insight 2]`
-3. `[Insight 3]`
-4. `[Insight 4]`
-5. `[Insight 5]`
-6. `[Insight 6]`
-7. `[Insight 7]`
-8. `[Insight 8]`
+1. _Insight 1_
+2. _Insight 2_
+3. _Insight 3_
+4. _Insight 4_
+5. _Insight 5_
+6. _Insight 6_
+7. _Insight 7_
+8. _Insight 8_
 
 ---
 
 ## Recommendations
 
-*Recommendations to be filled post-analysis. Provide 3-5 specific, actionable business recommendations, each linked directly to an insight above.*
+_Provide 3-5 specific, actionable business recommendations, each linked directly to an insight above._
 
 | # | Insight | Recommendation | Expected Impact |
 |---|---|---|---|
-| 1 | `[Which insight does this address?]` | `[What should the stakeholder do?]` | `[What measurable impact do you expect?]` |
-| 2 | `[Which insight does this address?]` | `[What should the stakeholder do?]` | `[What measurable impact do you expect?]` |
-| 3 | `[Which insight does this address?]` | `[What should the stakeholder do?]` | `[What measurable impact do you expect?]` |
+| 1 | _Which insight does this address?_ | _What should the stakeholder do?_ | _What measurable impact do you expect?_ |
+| 2 | _Which insight does this address?_ | _What should the stakeholder do?_ | _What measurable impact do you expect?_ |
+| 3 | _Which insight does this address?_ | _What should the stakeholder do?_ | _What measurable impact do you expect?_ |
 
 ---
 
@@ -245,18 +281,24 @@ This table must match evidence in GitHub Insights, PR history, and committed fil
 
 | Team Member | Dataset and Sourcing | ETL and Cleaning | EDA and Analysis | Statistical Analysis | Tableau Dashboard | Report Writing | PPT and Viva |
 |---|---|---|---|---|---|---|---|
-| Rohan Kumar | Owner / support | Owner / support | `[Role]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` |
-| `[Member 2]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` |
-| `[Member 3]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` |
-| `[Member 4]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` |
-| `[Member 5]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` |
-| `[Member 6]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` | `[Role]` |
+| _Member 1_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ |
+| _Member 2_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ |
+| _Member 3_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ |
+| _Member 4_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ |
+| _Member 5_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ |
+| _Member 6_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ |
 
 _Declaration: We confirm that the above contribution details are accurate and verifiable through GitHub Insights, PR history, and submitted artifacts._
 
-**Team Lead Name:** `[Rohan Kumar]`
+**Team Lead Name:** _____________________________
 
-**Date:** `[April 2026]`
+**Date:** _______________
+
+---
+
+## Academic Integrity
+
+All analysis, code, and recommendations in this repository must be the original work of the team listed above. Free-riding is tracked via GitHub Insights and pull request history. Any mismatch between the contribution matrix and actual commit history may result in individual grade adjustments.
 
 ---
 
