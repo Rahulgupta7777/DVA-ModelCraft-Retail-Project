@@ -4,11 +4,10 @@
 |---|---|
 | **Project Title** | Urban Traffic Collision & Severity Analysis |
 | **Sector** | Public Sector / Transportation Authority |
-| **Team ID** | `[e.g. DVA-B1-T3]` |
-| **Section** | `[To be filled by team]` |
+| **Team Name** | ModelCraft |
 | **Faculty Mentor** | `[To be filled by team]` |
 | **Institute** | Newton School of Technology, Pune |
-| **Submission Date** | `[To be filled by team]` |
+| **Submission Date** | 28-04-2026 |
 
 ### Team Members
 
@@ -44,7 +43,6 @@ Despite existing traffic regulations, road traffic accidents continue to cause s
 | **Direct Access Link** | `[Paste the direct download or access URL]` |
 | **Row Count** | 12,316 |
 | **Column Count** | 32 |
-| **Time Period Covered** | `[Determine via EDA]` |
 | **Format** | CSV |
 
 **Key Columns Used**
@@ -55,7 +53,7 @@ Despite existing traffic regulations, road traffic accidents continue to cause s
 | `Day_of_week` / `Time` | Temporal indicators of when the crash occurred | Used for temporal patrol scheduling |
 | `Light_conditions` | Lighting environment at the time of the crash | Used for environmental risk segmentation |
 | `Road_surface_conditions` | State of the road (e.g., Dry, Wet, Snow) | Used for infrastructure/weather segmentation |
-| `Age_band_of_driver` | Demographic grouping of the involved driver | Used for targeted public awareness targeting |
+| `Age_band_of_driver` | Demographic grouping of the involved driver | Used for designing targeted public awareness campaigns |
 
 For full column definitions, see [`docs/data_dictionary.md`](docs/data_dictionary.md).
 
@@ -145,9 +143,6 @@ SectionName_TeamID_ProjectName/
 |
 |-- docs/
 |   `-- data_dictionary.md
-|
-|-- DVA-oriented-Resume/
-`-- DVA-focused-Portfolio/
 ```
 
 ---
